@@ -100,7 +100,7 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-reviews.push({
+reviews.unshift({
   name: "Ashley",
   rating: 5,
   feedback: "This place is fantastic!"
@@ -131,7 +131,7 @@ Use the getReviewByIndex function below to do the following:
 function getReviewByIndex(array, index) {
   return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
   }
-console.log(getReviewByIndex(reviews, 0))
+console.log(getReviewByIndex(reviews, 1))
 
   
 
@@ -147,10 +147,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  let lastIndex = array[array.length -1]
+  return `${lastIndex.name} gave the restaurant a ${lastIndex.rating} star review, and their feedback was: ${lastIndex.feedback}`
 } 
-
+console.log(getLastReview(reviews))
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////

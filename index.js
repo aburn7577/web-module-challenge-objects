@@ -114,7 +114,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 reviews[7].feedback ="this place is chill with really cool people, great for getting work done on weekdays"
-console.log(reviews[7])
+// console.log(reviews[7])
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -128,10 +128,10 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
-
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
+  }
+console.log(getReviewByIndex(reviews, 0))
 
   
 

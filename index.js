@@ -15,8 +15,13 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(item,cost,time){
+    const menu = {
+      name: item,
+      price: cost,
+      category: time
+    }
+    return menu;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -28,7 +33,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem("soda", 1, "drink"))
+console.log(createMenuItem("eggs", 2, "breakfast"))
+console.log(createMenuItem("stake", 12, "dinner"))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,10 +55,25 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
+  discount: function(label){
+    let priceOff = 0;
+    
+    if(label == "teacher" || label == "student"){
+      priceOff= this.price *.25;
+      let newPrice = this.price - priceOff;
+      return newPrice;
+    }
+    else {
+      priceOff=this.price * .10;
+      let newPrice = this.price - priceOff;
+      return newPrice;
+    }
+
+  }
 }
-
-
+console.log(burger.discount("teacher"))
+console.log(burger.discount("student"))
+console.log(burger.discount("public"))
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
